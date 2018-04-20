@@ -10,10 +10,10 @@ def decode_json(request, json_field):
 
 # encode Json
 def encode_json(target):
+    result = dict()
     if len(target) != 0:
-        result = target
+        result['result'] = target
     else:
         e = Exception('dict\'s length is 0')
         raise e
-    result_string = json.dumps(result)
-    return result_string
+    return result
