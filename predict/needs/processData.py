@@ -1,3 +1,7 @@
+import numpy as np
+from PIL import Image
+import io
+
 def process_result_dict(result, size):
     temp_result = result
     sorted_list = list()

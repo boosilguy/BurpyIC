@@ -10,31 +10,22 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
-import os, json
-from django.core.exceptions import ImproperlyConfigured
+import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# SECURITY FILE
-SECRET_PATH = os.path.join(BASE_DIR, 'secrets.json')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
-with open(SECRET_PATH) as f:
-    secrets = json.loads(f.read())
-
-def get_secret(key, secrets = secrets):
-    try:
-        return secrets[key]
-    except KeyError:
-        error_msg = "Set the {} environment variable".format(key)
-        raise ImproperlyConfigured(error_msg)
-
 # SECURITY WARNING: keep the secret key used in production secret!
+<<<<<<< HEAD
 # Do not look at me!
 SECRET_KEY = get_secret("SECRET_KEY")
+=======
+SECRET_KEY = 'g4-40xd_mi)1p+f-tfb4wfz=la@u*7041^wlu(#aj14sj17%yr'
+>>>>>>> parent of a32617a... do not look at sk
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
