@@ -33,6 +33,7 @@ def get_secret(key, secrets = secrets):
         raise ImproperlyConfigured(error_msg)
 
 # SECURITY WARNING: keep the secret key used in production secret!
+# Do not look at me!
 SECRET_KEY = get_secret("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
