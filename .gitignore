@@ -1,1 +1,3 @@
 secrets.json
+.model/training
+.model/retrain.py

@@ -12,6 +12,6 @@ def process_result_dict(result, size):
         highest_predict_value = temp_result[highest_predict_key]
         del temp_result[highest_predict_key]
 
-        sorted_list.append({"product_name":highest_predict_key,"percentage":highest_predict_value})
+        sorted_list.append({"id":highest_predict_key,"percentage":highest_predict_value})
 
     return sorted_list
