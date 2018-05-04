@@ -28,7 +28,7 @@ def inception_predict(image):
     if FLAGS.save_dict:
         result = dict()
         for i in range(len(labels)):
-            name = labels[i]
+            name = int(labels[i])
             rate = prediction[0][i] * 100
             result[name] = round(rate, 2)
         result = process_result_dict(result, 5)
